@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/rock-paper-scissors', 'GameController@index')->name('rock-paper-scissors');
+Route::get('/rock-paper-scissors', 'GameController@rockPaperScissors')->name('rock-paper-scissors');
