@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/rock-paper-scissors', 'GameController@rockPaperScissors')->name('rock-paper-scissors');
+Route::post('/rock-paper-scissors', 'GameController@resultRockPaperScissors')->name('result-rock-paper-scissors');
