@@ -1,4 +1,4 @@
-<form action="#" method="post">
+<form action="/rock-paper-scissors" method="post">
   <input type="radio" name="test" value="rock">ぐー
   <input type="radio" name="test" value="scissors">ちょき
   <input type="radio" name="test" value="paper">ぱー
