@@ -14,8 +14,6 @@ class GameController extends Controller
     {
         $myHand = $request->hand;
         $opponent = array('rock','paper','scissors');
-        // $key = array_rand($opponent);
-        // $opponentHand = $opponent[$key];
         $opponentHand = array_rand($opponent);
         if ($myHand == 0 && $opponentHand ==0){
             $result = 'あいこ';
