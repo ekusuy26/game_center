@@ -10,4 +10,9 @@ class GameController extends Controller
     {
         return view('rockPaperScissors');
     }
+    public function resultRockPaperScissors(Request $request)
+    {
+        dd($request);
+        return view('rockPaperScissors');
+    }
 }
