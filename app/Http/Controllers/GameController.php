@@ -38,6 +38,6 @@ class GameController extends Controller
         }else{
             $result = 'エラー';
         }
-        return view('rockPaperScissors', compact('result', 'myHand', 'opponentHand'));
+        return view('result', compact('result', 'myHand', 'opponentHand'));
     }
 }

@@ -1,0 +1,3 @@
+{{$result}}
+{{$myHand}}
+{{$opponentHand}}
