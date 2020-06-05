@@ -17,5 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/black-jack', 'GameController@blackJack')->name('black-jack');
+
 Route::get('/rock-paper-scissors', 'GameController@rockPaperScissors')->name('rock-paper-scissors');
 Route::post('/rock-paper-scissors', 'GameController@resultRockPaperScissors')->name('result-rock-paper-scissors');
