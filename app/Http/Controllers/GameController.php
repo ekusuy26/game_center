@@ -46,11 +46,16 @@ class GameController extends Controller
         $deck = array();
         foreach ($marks as $mark){
             foreach ($numbers as $number){
-                $d = array($mark, $number);
-                array_push($deck,$d);
+                $card = array($mark, $number);
+                array_push($deck,$card);
             }
         }
-        $myHand = array_rand($deck, 2);
+        $myHand = array();
+        for ($count = 0; $count < 2; $count++){
+            $hand = array_rand($deck);
+            array_push($myHand,$hand);
+            array_splice($deck, $hand, 1);
+        }
         return view('blackJack', compact('deck', 'myHand'));
     }
 }
