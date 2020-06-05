@@ -68,4 +68,8 @@ class GameController extends Controller
         }
         return view('blackJack', compact('list', 'deck', 'playerHand', 'dealerHand'));
     }
+    public function blackJackDraw(Request $request)
+    {
+        return view('blackJack');
+    }
 }

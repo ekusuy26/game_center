@@ -19,6 +19,6 @@
 
 <form class="test" action="/black-jack" method="post">
     @csrf
-    <input type="hidden" class="form-control" value="$playerHand">
+    <input type="hidden" class="form-control" name="aaa" value="{$playerHand}">
     <input type="submit" value="draw card">
   </form>
