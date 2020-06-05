@@ -38,4 +38,8 @@ class GameController extends Controller
         }
         return view('result', compact('result', 'myHand', 'opponentHand'));
     }
+    public function blackJack()
+    {
+        return view('blackJack');
+    }
 }
