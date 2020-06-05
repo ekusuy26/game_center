@@ -42,6 +42,14 @@ class GameController extends Controller
     {
         $marks = array('heart','spade','diamond','club');
         $numbers = array('1','2','3','4','5','6','7','8','9','10','11','12','13');
-        return view('blackJack', compact('marks', 'numbers'));
+        // 山札を作成
+        $deck = array();
+        foreach ($marks as $mark){
+            foreach ($numbers as $number){
+                $d = array($mark, $number);
+                array_push($deck,$d);
+            }
+        }
+        return view('blackJack', compact('deck'));
     }
 }
