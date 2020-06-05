@@ -1,9 +1,18 @@
-<!-- @foreach ($deck as $d)
-<div>{{$d[0]}}{{$d[1]}}</div>
-@endforeach -->
-@foreach ($deck[$myHand[0]] as $hand)
-{{$hand}}
-@endforeach
-@foreach ($deck[$myHand[1]] as $hand)
-{{$hand}}
-@endforeach
+<div>player手札</div>
+<div>
+  @foreach ($list[$playerHand[0]] as $hand)
+  {{$hand}}
+  @endforeach
+  @foreach ($list[$playerHand[1]] as $hand)
+  {{$hand}}
+  @endforeach
+</div>
+<div>dealer手札</div>
+<div>
+  @foreach ($list[$dealerHand[0]] as $hand)
+  {{$hand}}
+  @endforeach
+  @foreach ($list[$dealerHand[1]] as $hand)
+  {{$hand}}
+  @endforeach
+</div>

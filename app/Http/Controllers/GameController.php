@@ -42,20 +42,30 @@ class GameController extends Controller
     {
         $marks = array('heart','spade','diamond','club');
         $numbers = array('1','2','3','4','5','6','7','8','9','10','11','12','13');
-        // 山札を作成
-        $deck = array();
+        // カード一覧を作成
+        $list = array();
         foreach ($marks as $mark){
             foreach ($numbers as $number){
                 $card = array($mark, $number);
-                array_push($deck,$card);
+                array_push($list,$card);
             }
         }
-        $myHand = array();
+        // 山札を作成
+        $deck = $list;
+        // playerの手札を作成
+        $playerHand = array();
         for ($count = 0; $count < 2; $count++){
             $hand = array_rand($deck);
-            array_push($myHand,$hand);
+            array_push($playerHand,$hand);
             array_splice($deck, $hand, 1);
         }
-        return view('blackJack', compact('deck', 'myHand'));
+        // dealerの手札を作成
+        $dealerHand = array();
+        for ($count = 0; $count < 2; $count++){
+            $hand = array_rand($deck);
+            array_push($dealerHand,$hand);
+            array_splice($deck, $hand, 1);
+        }
+        return view('blackJack', compact('list', 'deck', 'playerHand', 'dealerHand'));
     }
 }
