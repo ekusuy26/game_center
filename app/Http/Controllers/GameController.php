@@ -51,6 +51,6 @@ class GameController extends Controller
             }
         }
         $myHand = array_rand($deck, 2);
-        return view('blackJack', compact('deck'));
+        return view('blackJack', compact('deck', 'myHand'));
     }
 }
