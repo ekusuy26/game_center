@@ -40,6 +40,8 @@ class GameController extends Controller
     }
     public function blackJack()
     {
-        return view('blackJack');
+        $marks = array('heart','spade','diamond','club');
+        $numbers = array('1','2','3','4','5','6','7','8','9','10','11','12','13');
+        return view('blackJack', compact('marks', 'numbers'));
     }
 }
